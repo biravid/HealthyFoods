@@ -249,5 +249,16 @@ table.nutrition th{background:#fff9f5}
     </section> 
   </main>
 </div></article>
+  <h3>Visitors Count:</h3>
+  <div id="visitor-count">Loading...</div> 
+  <img src="https://visitor-badge.laobi.io/badge?page_id=biravid.HealthyFoods" alt="Visitor Count" />
+  <script>
+  fetch('https://api.countapi.xyz/update/biravid/HealthyFoods/?amount=1')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("visitor-count").innerText = data.value;
+    });
+  </script>
 </body>
+
 </html>
